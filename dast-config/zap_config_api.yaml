@@ -1,0 +1,85 @@
+env:
+    contexts:
+        - name: "Default Context"
+          urls:
+              - "http://10.32.1.172:10002/"
+          includePaths: []
+          excludePaths: []
+          authentication:
+              method: "form"
+              parameters:
+                  loginRequestBody: "username={%username%}&password={%password%}"
+                  loginPageUrl: "http://10.32.1.172:10002/WebGoat/login"
+                  loginRequestUrl: "http://10.32.1.172:10002/WebGoat/login"
+              verification:
+                  method: "both"
+                  loggedInRegex: "Logout"
+                  loggedOutRegex: "Sign in"
+          sessionManagement:
+              method: "cookie"
+              parameters: {}
+          users:
+              - name: "admin"
+                credentials:
+                    password: "Cx12345678"
+                    username: "cxadmin"
+    parameters:
+        failOnError: true
+        failOnWarning: false
+        progressToStdout: true
+    vars: {}
+jobs:
+    - parameters:
+          scanOnlyInScope: true
+          enableTags: false
+      rules: []
+      name: "passiveScan-config"
+      type: "passiveScan-config"
+    - parameters:
+          apiFile: "C:\\Users\\haimh\\OneDrive - Checkmarx\\Documents\\Webgoat\\OpenAPI\\\
+      webgoat-openapi.yaml"
+          apiUrl: ""
+          targetUrl: "http://10.32.1.172:10002/WebGoat/*"
+          context: "Default Context"
+      name: "openapi"
+      type: "openapi"
+    - parameters: {}
+      name: "passiveScan-wait"
+      type: "passiveScan-wait"
+    - parameters:
+          template: "risk-confidence-html"
+          theme: "original"
+          reportDir: "C:\\Users\\haimh"
+          reportFile: ""
+          reportTitle: "ZAP Scanning Report"
+          reportDescription: ""
+          displayReport: false
+      risks:
+          - "info"
+          - "low"
+          - "medium"
+          - "high"
+      confidences:
+          - "falsepositive"
+          - "low"
+          - "medium"
+          - "high"
+          - "confirmed"
+      sections:
+          - "siteRiskCounts"
+          - "responseBody"
+          - "appendix"
+          - "alertTypes"
+          - "responseHeader"
+          - "alertTypeCounts"
+          - "riskConfidenceCounts"
+          - "alerts"
+          - "aboutThisReport"
+          - "contents"
+          - "requestBody"
+          - "reportDescription"
+          - "reportParameters"
+          - "requestHeader"
+          - "summaries"
+      name: "report"
+      type: "report"

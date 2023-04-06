@@ -1,0 +1,1326 @@
+openapi: 3.0.1
+info:
+    title: WebGoat
+    version: 8.2.0
+servers:
+    - url: http://10.32.1.172:10002/WebGoat
+paths:
+    /WebGoat/AuthBypass.lesson.lesson:
+        get:
+            responses:
+                '200':
+                    content:
+                        text/html: {}
+                    description: OK
+    /WebGoat/CIA.lesson.lesson:
+        get:
+            responses:
+                '200':
+                    content:
+                        text/html: {}
+                    description: OK
+    /WebGoat/Challenge1.lesson.lesson:
+        get:
+            responses:
+                '200':
+                    content:
+                        text/html: {}
+                    description: OK
+    /WebGoat/Challenge5.lesson.lesson:
+        get:
+            responses:
+                '200':
+                    content:
+                        text/html: {}
+                    description: OK
+    /WebGoat/ChromeDevTools.lesson.lesson:
+        get:
+            responses:
+                '200':
+                    content:
+                        text/html: {}
+                    description: OK
+    /WebGoat/ChromeDevTools/dummy:
+        post:
+            responses:
+                '200':
+                    content:
+                        application/json: {}
+                    description: OK
+            requestBody:
+                content:
+                    application/x-www-form-urlencoded:
+                        schema:
+                            type: object
+                            properties:
+                                successMessage:
+                                    type: string
+    /WebGoat/ChromeDevTools/network:
+        post:
+            responses:
+                '200':
+                    content:
+                        application/json: {}
+                    description: OK
+            requestBody:
+                content:
+                    application/x-www-form-urlencoded:
+                        schema:
+                            type: object
+                            properties:
+                                network_num:
+                                    type: string
+                                number:
+                                    type: string
+    /WebGoat/CrossSiteScripting.lesson.lesson:
+        get:
+            responses:
+                '200':
+                    content:
+                        text/html: {}
+                    description: OK
+    /WebGoat/CrossSiteScripting/attack1:
+        post:
+            responses:
+                '200':
+                    content:
+                        application/json: {}
+                    description: OK
+            requestBody:
+                content:
+                    application/x-www-form-urlencoded:
+                        schema:
+                            type: object
+                            properties:
+                                answer_xss_1:
+                                    type: string
+    /WebGoat/CrossSiteScripting/attack5a:
+        get:
+            responses:
+                '200':
+                    content:
+                        application/json: {}
+                    description: OK
+            parameters:
+                - name: field1
+                  in: query
+                  schema:
+                      type: string
+                - name: field2
+                  in: query
+                  schema:
+                      type: string
+                - name: QTY1
+                  in: query
+                  schema:
+                      type: string
+                - name: QTY2
+                  in: query
+                  schema:
+                      type: string
+                - name: QTY3
+                  in: query
+                  schema:
+                      type: string
+                - name: QTY4
+                  in: query
+                  schema:
+                      type: string
+    /WebGoat/CrossSiteScripting/attack6a:
+        post:
+            responses:
+                '200':
+                    content:
+                        application/json: {}
+                    description: OK
+            requestBody:
+                content:
+                    application/x-www-form-urlencoded:
+                        schema:
+                            type: object
+                            properties:
+                                DOMTestRoute:
+                                    type: string
+    /WebGoat/CrossSiteScripting/dom-follow-up:
+        post:
+            responses:
+                '200':
+                    content:
+                        application/json: {}
+                    description: OK
+            requestBody:
+                content:
+                    application/x-www-form-urlencoded:
+                        schema:
+                            type: object
+                            properties:
+                                successMessage:
+                                    type: string
+    /WebGoat/CrossSiteScripting/phone-home-xss:
+        post:
+            responses:
+                '200':
+                    content:
+                        application/json: {}
+                    description: OK
+            requestBody:
+                content:
+                    application/x-www-form-urlencoded:
+                        schema:
+                            type: object
+                            properties:
+                                param1:
+                                    type: string
+                                param2:
+                                    type: string
+    /WebGoat/CrossSiteScripting/quiz:
+        post:
+            responses:
+                '200':
+                    content:
+                        application/json: {}
+                    description: OK
+            requestBody:
+                content:
+                    application/x-www-form-urlencoded:
+                        schema:
+                            type: object
+                            properties:
+                                question_0_solution:
+                                    type: string
+                                question_1_solution:
+                                    type: string
+                                question_2_solution:
+                                    type: string
+                                question_3_solution:
+                                    type: string
+                                question_4_solution:
+                                    type: string
+    /WebGoat/Crypto.lesson.lesson:
+        get:
+            responses:
+                '200':
+                    content:
+                        text/html: {}
+                    description: OK
+    /WebGoat/HttpBasics.lesson.lesson:
+        get:
+            responses:
+                '200':
+                    content:
+                        text/html: {}
+                    description: OK
+    /WebGoat/HttpBasics/attack1:
+        post:
+            responses:
+                '200':
+                    content:
+                        application/json: {}
+                    description: OK
+            requestBody:
+                content:
+                    application/x-www-form-urlencoded:
+                        schema:
+                            type: object
+                            properties:
+                                person:
+                                    type: string
+    /WebGoat/HttpBasics/attack2:
+        post:
+            responses:
+                '200':
+                    content:
+                        application/json: {}
+                    description: OK
+            requestBody:
+                content:
+                    application/x-www-form-urlencoded:
+                        schema:
+                            type: object
+                            properties:
+                                answer:
+                                    type: string
+                                magic_answer:
+                                    type: string
+                                magic_num:
+                                    type: string
+    /WebGoat/HttpProxies.lesson.lesson:
+        get:
+            responses:
+                '200':
+                    content:
+                        text/html: {}
+                    description: OK
+    /WebGoat/HttpProxies/intercept-request:
+        get:
+            responses:
+                '200':
+                    content:
+                        application/json: {}
+                    description: OK
+            parameters:
+                - name: changeMe
+                  in: query
+                  schema:
+                      type: string
+    /WebGoat/InsecureDeserialization.lesson.lesson:
+        get:
+            responses:
+                '200':
+                    content:
+                        text/html: {}
+                    description: OK
+    /WebGoat/InsecureDeserialization/task:
+        post:
+            responses:
+                '200':
+                    content:
+                        application/json: {}
+                    description: OK
+            requestBody:
+                content:
+                    application/x-www-form-urlencoded:
+                        schema:
+                            type: object
+                            properties:
+                                token:
+                                    type: string
+    /WebGoat/InsecureLogin.lesson.lesson:
+        get:
+            responses:
+                '200':
+                    content:
+                        text/html: {}
+                    description: OK
+    /WebGoat/InsecureLogin/task:
+        post:
+            responses:
+                '200':
+                    content:
+                        application/json: {}
+                    description: OK
+            requestBody:
+                content:
+                    application/x-www-form-urlencoded:
+                        schema:
+                            type: object
+                            properties:
+                                password:
+                                    type: string
+                                username:
+                                    type: string
+    /WebGoat/JWT.lesson.lesson:
+        get:
+            responses:
+                '200':
+                    content:
+                        text/html: {}
+                    description: OK
+    /WebGoat/JWT/final/delete:
+        post:
+            responses:
+                '200':
+                    content:
+                        application/json: {}
+                    description: OK
+            requestBody:
+                content:
+                    application/x-www-form-urlencoded:
+                        schema:
+                            type: object
+                            properties:
+                                token:
+                                    type: string
+    /WebGoat/JWT/refresh/checkout:
+        post:
+            responses:
+                '200':
+                    content:
+                        application/json: {}
+                    description: OK
+            security:
+                - bearer: []
+    /WebGoat/JWT/secret:
+        post:
+            responses:
+                '200':
+                    content:
+                        application/json: {}
+                    description: OK
+            requestBody:
+                content:
+                    application/x-www-form-urlencoded:
+                        schema:
+                            type: object
+                            properties:
+                                token:
+                                    type: string
+    /WebGoat/JWT/secret/gettoken:
+        get:
+            responses:
+                '200':
+                    content:
+                        text/html: {}
+                    description: OK
+    /WebGoat/JWT/votings:
+        post:
+            responses:
+                '200':
+                    content:
+                        application/json: {}
+                    description: OK
+    /WebGoat/JWT/votings/login:
+        get:
+            responses:
+                '200':
+                    content:
+                        application/json: {}
+                    description: OK
+            parameters:
+                - name: user
+                  in: query
+                  schema:
+                      type: string
+    /WebGoat/LessonTemplate.lesson.lesson:
+        get:
+            responses:
+                '200':
+                    content:
+                        text/html: {}
+                    description: OK
+    /WebGoat/MissingFunctionAC.lesson.lesson:
+        get:
+            responses:
+                '200':
+                    content:
+                        text/html: {}
+                    description: OK
+    /WebGoat/SSRF.lesson.lesson:
+        get:
+            responses:
+                '200':
+                    content:
+                        text/html: {}
+                    description: OK
+    /WebGoat/SSRF/task1:
+        post:
+            responses:
+                '200':
+                    content:
+                        application/json: {}
+                    description: OK
+            requestBody:
+                content:
+                    application/x-www-form-urlencoded:
+                        schema:
+                            type: object
+                            properties:
+                                url:
+                                    type: string
+    /WebGoat/SSRF/task2:
+        post:
+            responses:
+                '200':
+                    content:
+                        application/json: {}
+                    description: OK
+            requestBody:
+                content:
+                    application/x-www-form-urlencoded:
+                        schema:
+                            type: object
+                            properties:
+                                url:
+                                    type: string
+    /WebGoat/SecurePasswords.lesson.lesson:
+        get:
+            responses:
+                '200':
+                    content:
+                        text/html: {}
+                    description: OK
+    /WebGoat/SecurePasswords/assignment:
+        post:
+            responses:
+                '200':
+                    content:
+                        application/json: {}
+                    description: OK
+            requestBody:
+                content:
+                    application/x-www-form-urlencoded:
+                        schema:
+                            type: object
+                            properties:
+                                password:
+                                    type: string
+    /WebGoat/SqlInjection.lesson.lesson:
+        get:
+            responses:
+                '200':
+                    content:
+                        text/html: {}
+                    description: OK
+    /WebGoat/SqlInjection/assignment5a:
+        post:
+            responses:
+                '200':
+                    content:
+                        application/json: {}
+                    description: OK
+            requestBody:
+                content:
+                    application/x-www-form-urlencoded:
+                        schema:
+                            type: object
+                            properties:
+                                account:
+                                    type: string
+                                injection:
+                                    type: string
+                                operator:
+                                    type: string
+    /WebGoat/SqlInjection/assignment5b:
+        post:
+            responses:
+                '200':
+                    content:
+                        application/json: {}
+                    description: OK
+            requestBody:
+                content:
+                    application/x-www-form-urlencoded:
+                        schema:
+                            type: object
+                            properties:
+                                login_count:
+                                    type: string
+                                userid:
+                                    type: string
+    /WebGoat/SqlInjection/attack10:
+        post:
+            responses:
+                '200':
+                    content:
+                        application/json: {}
+                    description: OK
+            requestBody:
+                content:
+                    application/x-www-form-urlencoded:
+                        schema:
+                            type: object
+                            properties:
+                                action_string:
+                                    type: string
+    /WebGoat/SqlInjection/attack2:
+        post:
+            responses:
+                '200':
+                    content:
+                        application/json: {}
+                    description: OK
+            requestBody:
+                content:
+                    application/x-www-form-urlencoded:
+                        schema:
+                            type: object
+                            properties:
+                                query:
+                                    type: string
+    /WebGoat/SqlInjection/attack3:
+        post:
+            responses:
+                '200':
+                    content:
+                        application/json: {}
+                    description: OK
+            requestBody:
+                content:
+                    application/x-www-form-urlencoded:
+                        schema:
+                            type: object
+                            properties:
+                                query:
+                                    type: string
+    /WebGoat/SqlInjection/attack4:
+        post:
+            responses:
+                '200':
+                    content:
+                        application/json: {}
+                    description: OK
+            requestBody:
+                content:
+                    application/x-www-form-urlencoded:
+                        schema:
+                            type: object
+                            properties:
+                                query:
+                                    type: string
+    /WebGoat/SqlInjection/attack5:
+        post:
+            responses:
+                '200':
+                    content:
+                        application/json: {}
+                    description: OK
+            requestBody:
+                content:
+                    application/x-www-form-urlencoded:
+                        schema:
+                            type: object
+                            properties:
+                                query:
+                                    type: string
+    /WebGoat/SqlInjection/attack8:
+        post:
+            responses:
+                '200':
+                    content:
+                        application/json: {}
+                    description: OK
+            requestBody:
+                content:
+                    application/x-www-form-urlencoded:
+                        schema:
+                            type: object
+                            properties:
+                                auth_tan:
+                                    type: string
+                                name:
+                                    type: string
+    /WebGoat/SqlInjection/attack9:
+        post:
+            responses:
+                '200':
+                    content:
+                        application/json: {}
+                    description: OK
+            requestBody:
+                content:
+                    application/x-www-form-urlencoded:
+                        schema:
+                            type: object
+                            properties:
+                                auth_tan:
+                                    type: string
+                                name:
+                                    type: string
+    /WebGoat/SqlInjectionAdvanced.lesson.lesson:
+        get:
+            responses:
+                '200':
+                    content:
+                        text/html: {}
+                    description: OK
+    /WebGoat/SqlInjectionAdvanced/attack6a:
+        post:
+            responses:
+                '200':
+                    content:
+                        application/json: {}
+                    description: OK
+            requestBody:
+                content:
+                    application/x-www-form-urlencoded:
+                        schema:
+                            type: object
+                            properties:
+                                userid_6a:
+                                    type: string
+    /WebGoat/SqlInjectionAdvanced/attack6b:
+        post:
+            responses:
+                '200':
+                    content:
+                        application/json: {}
+                    description: OK
+            requestBody:
+                content:
+                    application/x-www-form-urlencoded:
+                        schema:
+                            type: object
+                            properties:
+                                userid_6b:
+                                    type: string
+    /WebGoat/SqlInjectionAdvanced/challenge:
+        put:
+            responses:
+                '200':
+                    content:
+                        application/json: {}
+                    description: OK
+            requestBody:
+                content:
+                    application/x-www-form-urlencoded:
+                        schema:
+                            type: object
+                            properties:
+                                confirm_password:
+                                    type: string
+                                email_reg:
+                                    type: string
+                                password_reg:
+                                    type: string
+                                username_reg:
+                                    type: string
+    /WebGoat/SqlInjectionAdvanced/challenge_Login:
+        post:
+            responses:
+                '200':
+                    content:
+                        application/json: {}
+                    description: OK
+            requestBody:
+                content:
+                    application/x-www-form-urlencoded:
+                        schema:
+                            type: object
+                            properties:
+                                password_login:
+                                    type: string
+                                username_login:
+                                    type: string
+    /WebGoat/SqlInjectionAdvanced/quiz:
+        post:
+            responses:
+                '200':
+                    content:
+                        application/json: {}
+                    description: OK
+            requestBody:
+                content:
+                    application/x-www-form-urlencoded:
+                        schema:
+                            type: object
+                            properties:
+                                question_0_solution:
+                                    type: string
+                                question_1_solution:
+                                    type: string
+                                question_2_solution:
+                                    type: string
+                                question_3_solution:
+                                    type: string
+                                question_4_solution:
+                                    type: string
+    /WebGoat/SqlInjectionMitigations.lesson.lesson:
+        get:
+            responses:
+                '200':
+                    content:
+                        text/html: {}
+                    description: OK
+    /WebGoat/SqlInjectionMitigations/attack10a:
+        post:
+            responses:
+                '200':
+                    content:
+                        application/json: {}
+                    description: OK
+            requestBody:
+                content:
+                    application/x-www-form-urlencoded:
+                        schema:
+                            type: object
+                            properties:
+                                field1:
+                                    type: string
+                                field2:
+                                    type: string
+                                field3:
+                                    type: string
+                                field4:
+                                    type: string
+                                field5:
+                                    type: string
+                                field6:
+                                    type: string
+                                field7:
+                                    type: string
+    /WebGoat/SqlInjectionMitigations/attack10b:
+        post:
+            responses:
+                '200':
+                    content:
+                        application/json: {}
+                    description: OK
+            requestBody:
+                content:
+                    application/x-www-form-urlencoded:
+                        schema:
+                            type: object
+                            properties:
+                                editor:
+                                    type: string
+                                field1:
+                                    type: string
+                                field2:
+                                    type: string
+                                field3:
+                                    type: string
+                                field4:
+                                    type: string
+                                field5:
+                                    type: string
+                                field6:
+                                    type: string
+                                field7:
+                                    type: string
+    /WebGoat/SqlInjectionMitigations/attack12a:
+        post:
+            responses:
+                '200':
+                    content:
+                        application/json: {}
+                    description: OK
+            requestBody:
+                content:
+                    application/x-www-form-urlencoded:
+                        schema:
+                            type: object
+                            properties:
+                                ip:
+                                    type: string
+    /WebGoat/SqlInjectionMitigations/servers:
+        get:
+            responses:
+                '200':
+                    content:
+                        application/json: {}
+                    description: OK
+            parameters:
+                - name: column
+                  in: query
+                  schema:
+                      type: string
+    /WebGoat/SqlOnlyInputValidation/attack:
+        post:
+            responses:
+                '200':
+                    content:
+                        application/json: {}
+                    description: OK
+            requestBody:
+                content:
+                    application/x-www-form-urlencoded:
+                        schema:
+                            type: object
+                            properties:
+                                userid_sql_only_input_validation:
+                                    type: string
+    /WebGoat/SqlOnlyInputValidationOnKeywords/attack:
+        post:
+            responses:
+                '200':
+                    content:
+                        application/json: {}
+                    description: OK
+            requestBody:
+                content:
+                    application/x-www-form-urlencoded:
+                        schema:
+                            type: object
+                            properties:
+                                userid_sql_only_input_validation_on_keywords:
+                                    type: string
+    /WebGoat/VulnerableComponents.lesson.lesson:
+        get:
+            responses:
+                '200':
+                    content:
+                        text/html: {}
+                    description: OK
+    /WebGoat/VulnerableComponents/attack1:
+        post:
+            responses:
+                '200':
+                    content:
+                        application/json: {}
+                    description: OK
+            requestBody:
+                content:
+                    application/x-www-form-urlencoded:
+                        schema:
+                            type: object
+                            properties:
+                                payload:
+                                    type: string
+    /WebGoat/WebWolf/landing:
+        post:
+            responses:
+                '200':
+                    content:
+                        application/json: {}
+                    description: OK
+            requestBody:
+                content:
+                    application/x-www-form-urlencoded:
+                        schema:
+                            type: object
+                            properties:
+                                uniqueCode:
+                                    type: string
+    /WebGoat/WebWolf/landing/password-reset:
+        get:
+            responses:
+                '200':
+                    content:
+                        text/html: {}
+                    description: OK
+            parameters:
+                - name: uniqueCode
+                  in: query
+                  schema:
+                      type: string
+    /WebGoat/WebWolf/mail:
+        post:
+            responses:
+                '200':
+                    content:
+                        application/json: {}
+                    description: OK
+            requestBody:
+                content:
+                    application/x-www-form-urlencoded:
+                        schema:
+                            type: object
+                            properties:
+                                uniqueCode:
+                                    type: string
+    /WebGoat/WebWolf/mail/send:
+        post:
+            responses:
+                '200':
+                    content:
+                        application/json: {}
+                    description: OK
+            requestBody:
+                content:
+                    application/x-www-form-urlencoded:
+                        schema:
+                            type: object
+                            properties:
+                                email:
+                                    type: string
+    /WebGoat/WebWolfIntroduction.lesson.lesson:
+        get:
+            responses:
+                '200':
+                    content:
+                        text/html: {}
+                    description: OK
+    /WebGoat/XXE.lesson.lesson:
+        get:
+            responses:
+                '200':
+                    content:
+                        text/html: {}
+                    description: OK
+    /WebGoat/access-control/hidden-menu:
+        post:
+            responses:
+                '200':
+                    content:
+                        application/json: {}
+                    description: OK
+            requestBody:
+                content:
+                    application/x-www-form-urlencoded:
+                        schema:
+                            type: object
+                            properties:
+                                hiddenMenu1:
+                                    type: string
+                                hiddenMenu2:
+                                    type: string
+    /WebGoat/access-control/user-hash:
+        post:
+            responses:
+                '200':
+                    content:
+                        application/json: {}
+                    description: OK
+            requestBody:
+                content:
+                    application/x-www-form-urlencoded:
+                        schema:
+                            type: object
+                            properties:
+                                userHash:
+                                    type: string
+    /WebGoat/auth-bypass/verify-account:
+        post:
+            responses:
+                '200':
+                    content:
+                        application/json: {}
+                    description: OK
+            requestBody:
+                content:
+                    application/x-www-form-urlencoded:
+                        schema:
+                            type: object
+                            properties:
+                                jsEnabled:
+                                    type: string
+                                secQuestion2:
+                                    type: string
+                                secQuestion3:
+                                    type: string
+                                userId:
+                                    type: string
+                                verifyMethod:
+                                    type: string
+    /WebGoat/challenge/1:
+        post:
+            responses:
+                '200':
+                    content:
+                        application/json: {}
+                    description: OK
+            requestBody:
+                content:
+                    application/x-www-form-urlencoded:
+                        schema:
+                            type: object
+                            properties:
+                                password:
+                                    type: string
+                                username:
+                                    type: string
+    /WebGoat/challenge/5:
+        post:
+            responses:
+                '200':
+                    content:
+                        application/json: {}
+                    description: OK
+            requestBody:
+                content:
+                    application/x-www-form-urlencoded:
+                        schema:
+                            type: object
+                            properties:
+                                password_login:
+                                    type: string
+                                username_login:
+                                    type: string
+    /WebGoat/challenge/flag:
+        post:
+            responses:
+                '200':
+                    content:
+                        application/json: {}
+                    description: OK
+            requestBody:
+                content:
+                    application/x-www-form-urlencoded:
+                        schema:
+                            type: object
+                            properties:
+                                flag:
+                                    type: string
+    /WebGoat/challenge/flag/:
+        post:
+            responses:
+                '200':
+                    content:
+                        application/json: {}
+                    description: OK
+            requestBody:
+                content:
+                    application/x-www-form-urlencoded:
+                        schema:
+                            type: object
+                            properties:
+                                flag:
+                                    type: string
+    /WebGoat/challenge/logo:
+        get:
+            responses:
+                '200':
+                    content:
+                        image/png: {}
+                    description: OK
+    /WebGoat/cia/quiz:
+        post:
+            responses:
+                '200':
+                    content:
+                        application/json: {}
+                    description: OK
+            requestBody:
+                content:
+                    application/x-www-form-urlencoded:
+                        schema:
+                            type: object
+                            properties:
+                                question_0_solution:
+                                    type: string
+                                question_1_solution:
+                                    type: string
+                                question_2_solution:
+                                    type: string
+                                question_3_solution:
+                                    type: string
+    /WebGoat/crypto/encoding/basic:
+        get:
+            responses:
+                '200':
+                    content:
+                        text/html: {}
+                    description: OK
+    /WebGoat/crypto/encoding/basic-auth:
+        post:
+            responses:
+                '200':
+                    content:
+                        application/json: {}
+                    description: OK
+            requestBody:
+                content:
+                    application/x-www-form-urlencoded:
+                        schema:
+                            type: object
+                            properties:
+                                answer_pwd:
+                                    type: string
+                                answer_user:
+                                    type: string
+    /WebGoat/crypto/encoding/xor:
+        post:
+            responses:
+                '200':
+                    content:
+                        application/json: {}
+                    description: OK
+            requestBody:
+                content:
+                    application/x-www-form-urlencoded:
+                        schema:
+                            type: object
+                            properties:
+                                answer_pwd1:
+                                    type: string
+    /WebGoat/crypto/hashing:
+        post:
+            responses:
+                '200':
+                    content:
+                        application/json: {}
+                    description: OK
+            requestBody:
+                content:
+                    application/x-www-form-urlencoded:
+                        schema:
+                            type: object
+                            properties:
+                                answer_pwd1:
+                                    type: string
+                                answer_pwd2:
+                                    type: string
+    /WebGoat/crypto/hashing/md5:
+        get:
+            responses:
+                '200':
+                    content:
+                        text/html: {}
+                    description: OK
+    /WebGoat/crypto/hashing/sha256:
+        get:
+            responses:
+                '200':
+                    content:
+                        text/html: {}
+                    description: OK
+    /WebGoat/crypto/secure/defaults:
+        post:
+            responses:
+                '200':
+                    content:
+                        application/json: {}
+                    description: OK
+            requestBody:
+                content:
+                    application/x-www-form-urlencoded:
+                        schema:
+                            type: object
+                            properties:
+                                secretFileName:
+                                    type: string
+                                secretText:
+                                    type: string
+    /WebGoat/crypto/signing/getprivate:
+        get:
+            responses:
+                '200':
+                    content:
+                        text/html: {}
+                    description: OK
+    /WebGoat/crypto/signing/verify:
+        post:
+            responses:
+                '200':
+                    content:
+                        application/json: {}
+                    description: OK
+            requestBody:
+                content:
+                    application/x-www-form-urlencoded:
+                        schema:
+                            type: object
+                            properties:
+                                modulus:
+                                    type: string
+                                signature:
+                                    type: string
+    /WebGoat/error.html:
+        get:
+            responses:
+                '500':
+                    content:
+                        application/json: {}
+                    description: Internal Server Error
+            parameters:
+                - name: column
+                  in: query
+                  schema:
+                      type: string
+        post:
+            responses:
+                '500':
+                    content:
+                        application/json: {}
+                    description: Internal Server Error
+            requestBody:
+                content:
+                    application/x-www-form-urlencoded:
+                        schema:
+                            type: object
+                            properties:
+                                flag:
+                                    type: string
+    /WebGoat/lesson-template/sample-attack:
+        post:
+            responses:
+                '200':
+                    content:
+                        application/json: {}
+                    description: OK
+            requestBody:
+                content:
+                    application/x-www-form-urlencoded:
+                        schema:
+                            type: object
+                            properties:
+                                param1:
+                                    type: string
+                                param2:
+                                    type: string
+    /WebGoat/scoreboard-data:
+        get:
+            responses:
+                '200':
+                    content:
+                        application/json: {}
+                    description: OK
+    /WebGoat/service/lessonoverview.mvc:
+        get:
+            responses:
+                '200':
+                    content:
+                        application/json: {}
+                    description: OK
+    /WebGoat/service/restartlesson.mvc:
+        get:
+            responses:
+                '200':
+                    content: {}
+                    description: OK
+    /WebGoat/users:
+        get:
+            responses:
+                '200':
+                    content:
+                        application/json: {}
+                    description: OK
+    /WebGoat/xxe/applysecurity:
+        get:
+            responses:
+                '200':
+                    content:
+                        text/plain: {}
+                    description: OK
+    /WebGoat/xxe/content-type:
+        post:
+            responses:
+                '200':
+                    content:
+                        application/json: {}
+                    description: OK
+    /WebGoat/xxe/simple:
+        post:
+            responses:
+                '200':
+                    content:
+                        application/json: {}
+                    description: OK
+    /WebGoat/xxe/tmpdir:
+        get:
+            responses:
+                '200':
+                    content:
+                        text/plain: {}
+                    description: OK
+    /WebWolf/fileupload:
+        post:
+            responses:
+                '302':
+                    content: {}
+                    description: Found
+    /WebWolf/mail:
+        get:
+            responses:
+                '200':
+                    content:
+                        text/html: {}
+                    description: OK
+    /WebWolf/requests:
+        get:
+            responses:
+                '200':
+                    content:
+                        text/html: {}
+                    description: OK
+    /landing:
+        get:
+            responses:
+                '200':
+                    content: {}
+                    description: OK
+            parameters:
+                - name: text
+                  in: query
+                  schema:
+                      type: string
+                - name: uniqueCode
+                  in: query
+                  schema:
+                      type: string
+    /mail:
+        post:
+            responses:
+                '200':
+                    content: {}
+                    description: OK
+                '201':
+                    content: {}
+                    description: Created
+    /tmpdir:
+        get:
+            responses:
+                '200':
+                    content:
+                        text/plain: {}
+                    description: OK
